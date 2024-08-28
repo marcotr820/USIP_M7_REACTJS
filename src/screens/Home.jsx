@@ -7,7 +7,7 @@ const Home = () => {
          <h1>
             Modulo 7: DESARROLLO FRONTEND CON REACTJS
          </h1>
-         <h2>Bienvenido</h2>
+         <h2>Bienvenido: <strong>MARCO ANTONIO TICONA RIOS</strong></h2>
          <hr />
          <p>Este modulo se centra en el uso de <b>React,</b> incluyendo la creación de <b>componentes,</b>
             el manejo de <b>hooks,</b> y el uso de <b>Redux.</b>
