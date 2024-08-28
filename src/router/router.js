@@ -4,6 +4,8 @@ import Forms from "../screens/Forms";
 import Home from "../screens/Home";
 import Products from "../screens/Products";
 
+const basename = process.env.NODE_ENV === 'production' ? '/proyecto' : '/';
+
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
@@ -29,6 +31,8 @@ const router = createBrowserRouter([
          }
       ]
    }
-]);
+], {
+   basename: basename
+});
 
 export default router
