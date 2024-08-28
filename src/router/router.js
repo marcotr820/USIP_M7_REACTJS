@@ -4,7 +4,7 @@ import Forms from "../screens/Forms";
 import Home from "../screens/Home";
 import Products from "../screens/Products";
 
-const basename = process.env.NODE_ENV === 'production' ? '/proyecto' : '/';
+const basename = process.env.NODE_ENV === 'production' ? '/usip-react-m7' : '/';
 
 const { createBrowserRouter } = require("react-router-dom");
 
