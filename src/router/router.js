@@ -7,7 +7,9 @@ import LoginForm from "../screens/Forms/LoginForm";
 import App from "../App";
 import Dictionary from '../screens/Dictionary/Dictionary';
 
-const basename = process.env.NODE_ENV === 'production' ? '/desarrollo-frontend-react' : '/';
+const basename = process.env.NODE_ENV === 'production' ? '/usip-react-m7' : '/';
+
+const { createBrowserRouter } = require("react-router-dom");
 
 const routes = createBrowserRouter([
     {
