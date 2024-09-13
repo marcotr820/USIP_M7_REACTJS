@@ -9,8 +9,6 @@ import Dictionary from '../screens/Dictionary/Dictionary';
 
 const basename = process.env.NODE_ENV === 'production' ? '/usip-react-m7' : '/';
 
-const { createBrowserRouter } = require("react-router-dom");
-
 const routes = createBrowserRouter([
     {
         path: '/',
