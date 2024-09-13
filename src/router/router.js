@@ -1,38 +1,41 @@
-import App from "../App";
+import { createBrowserRouter } from 'react-router-dom';
+
 import Default from "../screens/Default";
-import Forms from "../screens/Forms";
-import Home from "../screens/Home";
-import Products from "../screens/Products";
+import Product from "../screens/Product";
+import LoginForm from "../screens/Forms/LoginForm";
 
-const basename = process.env.NODE_ENV === 'production' ? '/usip-react-m7' : '/';
+import App from "../App";
+import Dictionary from '../screens/Dictionary/Dictionary';
 
-const { createBrowserRouter } = require("react-router-dom");
+const basename = process.env.NODE_ENV === 'production' ? '/desarrollo-frontend-react' : '/';
 
-const router = createBrowserRouter([
-   {
-      path: '/',
-      element: <App />,
-      children: [
-         {
-            path: '/',
-            element: <Home />
-         },
-         {
-            path: '/default',
-            element: <Default />,
-         },
-         {
-            path: '/products',
-            element: <Products />,
-         },
-         {
-            path: '/forms',
-            element: <Forms />,
-         }
-      ]
-   }
-], {
-   basename: basename
-});
+const routes = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                path: '/default',
+                element: <Default />,
+            },
+            {
+                path: '/products',
+                element: <Product />,
+            },
+            {
+                path: '/login',
+                element: <LoginForm />,
+            },
+            {
+                path: '/dictionary',
+                element: <Dictionary />,
+            },
+        ]
+    }
+],
+    {
+        basename:    basename
+    }
+);
 
-export default router
+export default routes;

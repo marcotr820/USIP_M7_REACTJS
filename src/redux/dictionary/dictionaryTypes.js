@@ -1,0 +1,2 @@
+export const ADD_PALABRAS = 'SAVE_PALABRA';
+export const DELETE_PALABRA = 'DELETE_PALABRA';

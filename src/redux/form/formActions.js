@@ -1,14 +1,14 @@
-import { CLEAR_FORM_DATA, SET_FORM_DATA } from './formTypes'
+import { SET_FORM_DATA, CLEAR_FORM_DATA } from './formTypes';
 
-export const setFormData = (values) => {
-   return {
-      type: SET_FORM_DATA,
-      payload: values,
-   }
+export const saveFormData = (formData) => {
+    return {
+        type: SET_FORM_DATA,
+        payload: formData,
+    }
 }
 
 export const clearSesion = () => {
-   return {
-      type: CLEAR_FORM_DATA,
-   }
+    return {
+        type: CLEAR_FORM_DATA,
+    }
 }

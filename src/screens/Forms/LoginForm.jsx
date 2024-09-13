@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import useForm from '../hooks/useForm'
-import { useDispatch, useSelector } from 'react-redux';
-import { clearSesion, setFormData } from '../redux/form/formActions';
+import useForm from "../../hooks/useForm";
+import { useSelector, useDispatch } from 'react-redux';
+import { saveFormData, clearSesion } from "../../redux/form/formActions";
 import { motion } from 'framer-motion';
-import ModalInfo from '../components/ModalInfo';
+import ModalInfo from "../../components/ModalInfo";
 
-const Forms = () => {
+import { useState } from "react";
 
+const LoginForm = () => {
    const form = useSelector(state => state.form);
 
    const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Forms = () => {
       event.preventDefault();
       if (values.password === form.defaultPassword) {
          dispatch(
-            setFormData(values)
+            saveFormData(values)
          )
          setMessage("Bienvenido al modulo 7 React");
       } else {
@@ -69,14 +69,13 @@ const Forms = () => {
             message={message}
             onClose={hideModal}
             isLogout={isLogout}
-            logout={logout}/>
+            logout={logout} />
 
          <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
          >
-            <h1>Form hook</h1>
             <form onSubmit={handleSubmit}>
                {
                   form.formData.username && <h4>username: {form.formData.username}</h4>
@@ -116,7 +115,7 @@ const Forms = () => {
             </form>
          </motion.div>
       </>
-   )
-}
+   );
+};
 
-export default Forms
+export default LoginForm;
